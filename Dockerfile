@@ -1,5 +1,5 @@
 FROM alpine:latest
 
-RUN apk add --update bash jq python py-pip python3 nodejs zip && \
-    pip3 install --upgrade awscli setuptools pip && \
+RUN apk add --update bash build-base jq python python3-dev py-pip python3 nodejs zip && \
+    pip3 install --upgrade awscli aws-sam-cli setuptools pip && \
     rm -r /root/.cache/
